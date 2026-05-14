@@ -53,36 +53,34 @@
   background: var(--color-secondary);
 }
 
-/* Glitch Effect */
+/* Glitch Effect — works on all screen sizes */
 .glitch {
   position: relative;
   display: inline-block;
 }
 
-/* Glitch pseudo-elements — desktop only */
-@media (min-width: 641px) {
-  .glitch::before,
-  .glitch::after {
-    content: attr(data-text);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-  }
-  .glitch::before {
-    left: 2px;
-    color: var(--color-primary);
-    text-shadow: none;
-    animation: glitch-anim 5s infinite linear alternate-reverse;
-  }
-  .glitch::after {
-    left: -2px;
-    color: var(--color-secondary);
-    text-shadow: none;
-    animation: glitch-anim2 5s infinite linear alternate-reverse;
-  }
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  /* NO background — transparent so orbs/gradients show through */
+}
+
+.glitch::before {
+  left: 2px;
+  color: var(--color-primary);
+  animation: glitch-anim 5s infinite linear alternate-reverse;
+}
+
+.glitch::after {
+  left: -2px;
+  color: var(--color-secondary);
+  animation: glitch-anim2 5s infinite linear alternate-reverse;
 }
 
 @keyframes glitch-anim {
@@ -131,18 +129,6 @@
   90%  { clip-path: inset(22% 0 40% 0); }
   95%  { clip-path: inset(40% 0 2% 0); }
   100% { clip-path: inset(30% 0 45% 0); }
-}
-
-/* Mobile: NO glitch at all — clean plain text */
-@media (max-width: 640px) {
-  .glitch {
-    animation: none !important;
-    text-shadow: none !important;
-  }
-  .glitch::before,
-  .glitch::after {
-    display: none !important;
-  }
 }
 
 /* Gradient Text utility */

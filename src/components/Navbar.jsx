@@ -34,31 +34,66 @@ const Navbar = () => {
 
   return (
     <>
-      {/* Navbar */}
+      {/* Navbar — fixed, always within viewport width */}
       <header
-        style={{ boxSizing: 'border-box' }}
-        className={`fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300 ${
-          scrolled
-            ? 'bg-[var(--color-background)]/90 backdrop-blur-md border-b border-[var(--color-card-border)] py-3'
-            : 'bg-transparent py-5'
-        }`}
+        style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          width: '100%',
+          maxWidth: '100vw',
+          boxSizing: 'border-box',
+          zIndex: 50,
+          transition: 'all 0.3s',
+          ...(scrolled
+            ? {
+                backgroundColor: 'rgba(8,8,8,0.9)',
+                backdropFilter: 'blur(12px)',
+                borderBottom: '1px solid #1A1A1A',
+                padding: '12px 0',
+              }
+            : {
+                backgroundColor: 'transparent',
+                padding: '20px 0',
+              }),
+        }}
       >
-        {/* Inner container — always fits within screen */}
+        {/* Inner row — padded, never overflows */}
         <div
-          style={{ boxSizing: 'border-box' }}
-          className="flex items-center justify-between w-full px-4 sm:px-8 md:px-12 max-w-7xl mx-auto"
+          style={{
+            boxSizing: 'border-box',
+            width: '100%',
+            maxWidth: '1280px',
+            margin: '0 auto',
+            padding: '0 16px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+          }}
         >
           {/* Logo */}
           <a
             href="#"
             onClick={(e) => scrollToSection(e, '#home')}
-            className="text-xl sm:text-2xl font-bold font-heading text-[var(--color-tertiary)] hover:text-[var(--color-primary)] transition-colors shrink-0"
+            style={{
+              fontSize: '1.25rem',
+              fontWeight: 700,
+              fontFamily: 'var(--font-heading)',
+              color: 'var(--color-tertiary)',
+              textDecoration: 'none',
+              flexShrink: 0,
+            }}
           >
-            LSS<span className="text-[var(--color-primary)]">.</span>
+            LSS<span style={{ color: 'var(--color-primary)' }}>.</span>
           </a>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex gap-8">
+          <nav
+            style={{
+              display: 'none',
+            }}
+            className="md:flex gap-8"
+          >
             {navLinks.map((link) => (
               <a
                 key={link.name}
@@ -72,9 +107,22 @@ const Navbar = () => {
             ))}
           </nav>
 
-          {/* Mobile Hamburger — always inside layout */}
+          {/* Mobile Hamburger — inline style guarantees it stays in layout */}
           <button
-            className="flex md:hidden items-center justify-center w-10 h-10 text-[var(--color-tertiary)] focus:outline-none shrink-0"
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              width: '40px',
+              height: '40px',
+              background: 'none',
+              border: 'none',
+              color: 'var(--color-tertiary)',
+              cursor: 'pointer',
+              flexShrink: 0,
+              padding: 0,
+            }}
+            className="md:hidden"
             onClick={() => setMobileMenuOpen(true)}
             aria-label="Open menu"
           >
@@ -91,15 +139,42 @@ const Navbar = () => {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
             transition={{ type: 'tween', duration: 0.3 }}
-            className="fixed inset-0 bg-[var(--color-background)] z-[200] flex flex-col"
+            style={{
+              position: 'fixed',
+              inset: 0,
+              backgroundColor: 'var(--color-background)',
+              zIndex: 200,
+              display: 'flex',
+              flexDirection: 'column',
+            }}
           >
-            {/* Close button row */}
-            <div className="flex items-center justify-between px-4 py-5 border-b border-[var(--color-card-border)]">
-              <span className="text-xl font-bold font-heading text-[var(--color-tertiary)]">
-                LSS<span className="text-[var(--color-primary)]">.</span>
+            {/* Top bar with close button */}
+            <div
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                padding: '16px',
+                borderBottom: '1px solid #1A1A1A',
+                boxSizing: 'border-box',
+              }}
+            >
+              <span style={{ fontSize: '1.25rem', fontWeight: 700, fontFamily: 'var(--font-heading)', color: 'var(--color-tertiary)' }}>
+                LSS<span style={{ color: 'var(--color-primary)' }}>.</span>
               </span>
               <button
-                className="flex items-center justify-center w-10 h-10 text-[var(--color-tertiary)] focus:outline-none"
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  width: '40px',
+                  height: '40px',
+                  background: 'none',
+                  border: 'none',
+                  color: 'var(--color-tertiary)',
+                  cursor: 'pointer',
+                  padding: 0,
+                }}
                 onClick={() => setMobileMenuOpen(false)}
                 aria-label="Close menu"
               >
@@ -108,7 +183,7 @@ const Navbar = () => {
             </div>
 
             {/* Nav links */}
-            <nav className="flex flex-col justify-center flex-1 gap-2 px-6">
+            <nav style={{ display: 'flex', flexDirection: 'column', flex: 1, justifyContent: 'center', padding: '0 24px' }}>
               {navLinks.map((link, i) => (
                 <motion.a
                   key={link.name}
@@ -117,7 +192,16 @@ const Navbar = () => {
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.05 * i }}
-                  className="py-4 text-2xl font-heading font-bold text-[var(--color-tertiary)] hover:text-[var(--color-primary)] transition-colors border-b border-[var(--color-card-border)]"
+                  style={{
+                    padding: '16px 0',
+                    fontSize: '1.5rem',
+                    fontFamily: 'var(--font-heading)',
+                    fontWeight: 700,
+                    color: 'var(--color-tertiary)',
+                    textDecoration: 'none',
+                    borderBottom: '1px solid #1A1A1A',
+                    display: 'block',
+                  }}
                 >
                   {link.name}
                 </motion.a>
