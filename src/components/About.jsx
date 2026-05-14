@@ -51,7 +51,7 @@ const About = () => {
               <div className="w-3 h-3 rounded-full bg-green-500/80" />
               <span className="ml-2 text-xs font-mono text-[var(--color-muted)]">bash - 80x24</span>
             </div>
-            <div className="p-6 font-mono text-sm leading-relaxed">
+            <div className="p-4 sm:p-6 font-mono text-xs sm:text-sm leading-relaxed break-words">
               <div className="flex gap-2">
                 <span className="text-green-400">lal@portfolio:~$</span>
                 <span className="text-[var(--color-tertiary)]">whoami</span>

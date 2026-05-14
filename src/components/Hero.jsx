@@ -88,26 +88,16 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-screen w-full flex flex-col justify-center items-center px-6 pt-20 overflow-hidden">
+    <section id="home" className="relative min-h-screen w-full flex flex-col justify-center items-center px-4 sm:px-6 pt-20 overflow-hidden">
       <div className="z-10 w-full max-w-5xl mx-auto flex flex-col items-center text-center">
-        
-        {/* Floating Badge */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0 }}
-          className="mb-8 px-4 py-2 rounded-full border border-[var(--color-primary)]/30 bg-[var(--color-primary)]/5 text-[var(--color-primary)] font-mono text-sm flex items-center gap-2 backdrop-blur-sm"
-        >
-          <span className="w-2 h-2 rounded-full bg-[var(--color-primary)] animate-pulse" />
-          Open to Internships 2026
-        </motion.div>
 
         {/* Name with Glitch */}
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-5xl md:text-7xl lg:text-8xl font-bold font-heading mb-4 tracking-tighter"
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="font-bold font-heading mb-4 tracking-tighter leading-none w-full text-center"
+          style={{ fontSize: 'clamp(2rem, 10vw, 7rem)' }}
         >
           <span className="glitch" data-text="LAL SATYA SAI">LAL SATYA SAI</span>
         </motion.h1>
@@ -116,10 +106,10 @@ const Hero = () => {
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          className="text-2xl md:text-4xl font-light mb-8 text-[var(--color-tertiary)]"
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="text-lg sm:text-2xl md:text-4xl font-light mb-8 text-[var(--color-tertiary)] px-2 text-center"
         >
-          Building intelligent systems as a <br className="md:hidden" />
+          Building intelligent systems as a{' '}
           <Typewriter words={roles} />
         </motion.h2>
 
@@ -144,7 +134,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.8 }}
-          className="flex flex-wrap justify-center gap-x-6 gap-y-4 text-sm md:text-base font-mono text-[var(--color-muted)]"
+          className="flex flex-wrap justify-center items-center gap-x-3 sm:gap-x-6 gap-y-3 text-xs sm:text-sm md:text-base font-mono text-[var(--color-muted)]"
         >
           <div className="flex items-center gap-2">
             <span className="text-[var(--color-primary)]">9.18</span> CGPA

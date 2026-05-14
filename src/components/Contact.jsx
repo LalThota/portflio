@@ -83,19 +83,29 @@ const Contact = () => {
               <div className="w-12 h-12 rounded-full bg-[var(--color-card)] border border-[var(--color-card-border)] group-hover:border-[var(--color-primary)] flex items-center justify-center transition-colors">
                 <FiMail size={20} />
               </div>
-              <span className="font-mono">lal98thota@gmail.com</span>
+              <span className="font-mono break-all">lal98thota@gmail.com</span>
             </a>
-            <a href="#" className="flex items-center gap-4 text-[var(--color-muted)] hover:text-[var(--color-primary)] transition-colors group">
+            <a
+              href="https://github.com/lalthota"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-4 text-[var(--color-muted)] hover:text-[var(--color-primary)] transition-colors group"
+            >
               <div className="w-12 h-12 rounded-full bg-[var(--color-card)] border border-[var(--color-card-border)] group-hover:border-[var(--color-primary)] flex items-center justify-center transition-colors">
                 <FiGithub size={20} />
               </div>
               <span className="font-mono">github.com/lalthota</span>
             </a>
-            <a href="#" className="flex items-center gap-4 text-[var(--color-muted)] hover:text-[var(--color-primary)] transition-colors group">
+            <a
+              href="https://www.linkedin.com/in/lalsatyasaithota"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-4 text-[var(--color-muted)] hover:text-[var(--color-primary)] transition-colors group"
+            >
               <div className="w-12 h-12 rounded-full bg-[var(--color-card)] border border-[var(--color-card-border)] group-hover:border-[var(--color-primary)] flex items-center justify-center transition-colors">
                 <FiLinkedin size={20} />
               </div>
-              <span className="font-mono">linkedin.com/in/lalthota</span>
+              <span className="font-mono">linkedin.com/in/lalsatyasaithota</span>
             </a>
           </div>
         </motion.div>
