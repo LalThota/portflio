@@ -24,21 +24,10 @@ const projectsData = [
     category: ["Hackathon", "AI/ML"],
     featured: true,
     badgeText: "🏆 National Top 10",
-    links: { github: "#", live: "#" },
+    links: { github: "#", live: "https://lateral-yo4y.vercel.app/" },
     image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=800&auto=format&fit=crop"
   },
-  {
-    id: 2,
-    title: "VenueFlow",
-    subtitle: "AI Venue Assistant",
-    description: "AI-powered venue discovery and booking assistant featuring dark glassmorphism UI. Uses generative AI to match users with perfect venues based on conversational inputs.",
-    tech: ["React.js", "Gemini 1.5"],
-    category: ["Hackathon", "Full Stack", "AI/ML"],
-    featured: true,
-    badgeText: "🚀 PromptWars Hackathon",
-    links: { github: "#", live: "#" },
-    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800&auto=format&fit=crop"
-  },
+
   {
     id: 3,
     title: "AI Agent Gym Planner",
@@ -51,6 +40,17 @@ const projectsData = [
     image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=800&auto=format&fit=crop"
   },
   {
+    id: 5,
+    title: "FairLens",
+    subtitle: "Predictive Analytics Model",
+    description: "Machine learning model predicting organizational decision failures using behavioral and historical data. Built for Smart India Hackathon to assist management boards.",
+    tech: ["Python", "Scikit-learn", "Pandas"],
+    category: ["AI/ML", "Hackathon"],
+    featured: false,
+    links: { github: "https://github.com/bhanusai06/FairLens", live: "https://fair-lens.vercel.app" },
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop"
+  },
+  {
     id: 4,
     title: "College Utility Portal",
     subtitle: "Campus Management System",
@@ -58,19 +58,54 @@ const projectsData = [
     tech: ["React.js", "Node.js", "MongoDB"],
     category: ["Full Stack"],
     featured: false,
-    links: { github: "#", live: "#" },
-    image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=800&auto=format&fit=crop"
+    links: { github: "https://github.com/LalThota/SRKRCUP.git", live: "https://srkrcupp.vercel.app/" },
+    image: "https://raw.githubusercontent.com/LalThota/portflio/main/Screenshot%20From%202026-05-14%2010-47-43.png"
+  },
+
+  {
+    id: 6,
+    title: "AI Diet Planner",
+    subtitle: "AI Powered Diet Planner",
+    description: "An intelligent platform that generates highly personalized diet plans based on user health metrics and nutritional goals.",
+    tech: ["React.js", "AI/ML"],
+    category: ["Full Stack", "AI/ML"],
+    featured: false,
+    links: { github: "https://github.com/LalThota/ai-dietplanner.git", live: "https://ai-dietplanner.vercel.app/" },
+    image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=800&auto=format&fit=crop"
   },
   {
-    id: 5,
-    title: "Decision Failure AI",
-    subtitle: "Predictive Analytics Model",
-    description: "Machine learning model predicting organizational decision failures using behavioral and historical data. Built for Smart India Hackathon to assist management boards.",
-    tech: ["Python", "Scikit-learn", "Pandas"],
-    category: ["AI/ML", "Hackathon"],
+    id: 7,
+    title: "SkillBridge",
+    subtitle: "Skill Bridging Platform",
+    description: "A comprehensive platform designed to bridge the gap between academic learning and industry requirements through structured courses.",
+    tech: ["React.js", "Full Stack"],
+    category: ["Full Stack"],
     featured: false,
-    links: { github: "#", live: "#" },
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop"
+    links: { github: "https://github.com/LalThota/SkillBridge.git", live: "https://skill-bridge-pied.vercel.app/" },
+    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    id: 8,
+    title: "Finora Business Analysis",
+    subtitle: "Business Analytics Dashboard",
+    description: "A business analytics dashboard designed to process and provide interactive reporting insights for enterprise data.",
+    tech: ["React.js", "Data Analytics"],
+    category: ["Full Stack"],
+    featured: false,
+    links: { github: "https://github.com/LalThota/Finora.git", live: "https://finora-pied.vercel.app/" },
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    id: 9,
+    title: "Ecowipe",
+    subtitle: "E-Waste Management",
+    description: "An environmental sustainability platform aimed at tracking, managing, and promoting the proper disposal of electronic waste.",
+    tech: ["HTML", "JavaScript"],
+    category: ["Full Stack", "Hackathon"],
+    featured: true,
+    badgeText: "🏆 1st Prize Prajwalan",
+    links: { github: "#", live: "https://charan242726.github.io/e-waste/" },
+    image: "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?q=80&w=800&auto=format&fit=crop"
   }
 ];
 

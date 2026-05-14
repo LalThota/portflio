@@ -76,8 +76,8 @@ const About = () => {
           {/* Photo Placeholder */}
           <motion.div variants={itemVariants} className="relative aspect-[4/3] w-full max-w-md mx-auto lg:mx-0 rounded-lg overflow-hidden border border-[var(--color-card-border)] group">
             <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-background)] to-[var(--color-card)] z-10" />
-            <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiMzMzMiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48cmVjdCB4PSIzIiB5PSIzIiB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHJ4PSIyIiByeT0iMiI+PC9yZWN0PjxjaXJjbGUgY3g9IjguNSIgY3k9IjguNSIgcj0iMS41Ij48L2NpcmNsZT48cG9seWxpbmUgcG9pbnRzPSIyMSAxNSAxNiAxMCA1IDIxIj48L3BvbHlsaW5lPjwvc3ZnPg==')] bg-center bg-no-repeat bg-[length:64px_64px] opacity-20 z-20 group-hover:scale-110 transition-transform duration-700" />
-            <div className="absolute inset-0 border-2 border-[var(--color-primary)]/0 group-hover:border-[var(--color-primary)]/30 transition-colors duration-500 z-30" />
+            <img src="https://raw.githubusercontent.com/LalThota/portflio/main/WhatsApp%20Image%202026-05-14%20at%209.57.26%20AM.jpeg" alt="Lal Satya Sai" className="absolute inset-0 w-full h-full object-cover z-20 group-hover:scale-105 transition-transform duration-700" />
+            <div className="absolute inset-0 border-2 border-[var(--color-primary)]/0 group-hover:border-[var(--color-primary)]/30 transition-colors duration-500 z-30 pointer-events-none" />
             {/* You can replace this with an actual image tag */}
             <div className="absolute bottom-4 left-4 z-30">
               <span className="px-3 py-1 bg-black/80 backdrop-blur-md text-xs font-mono border border-white/10 rounded">Lal Satya Sai</span>
@@ -115,7 +115,7 @@ const About = () => {
             <div className="relative">
               <span className="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-[var(--color-background)] border-2 border-[var(--color-secondary)]" />
               <span className="text-sm font-mono text-[var(--color-secondary)] mb-1 block">Present</span>
-              <h4 className="text-lg font-bold">Associative Member & Builder</h4>
+              <h4 className="text-lg font-bold">Associative Member</h4>
               <p className="text-sm text-[var(--color-muted)] mt-1">SRKR Coding Club • Hackathon Winner</p>
             </div>
           </motion.div>
